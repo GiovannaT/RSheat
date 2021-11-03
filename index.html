@@ -10,7 +10,8 @@
   </head>
   <body>
     <main>
-        <div class="container">
+      <div class="container">
+        <div class="card">
           <div class="avatar">
             <span>
               <img src="assets/selo.svg" alt="Selo Rocketseat">
@@ -35,6 +36,16 @@
             </li>
           </ul>
         </div>
+      </div>
     </main>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelector(".card"),{
+		    max: 2,
+        glare: true,
+        maxGlare: 0.5,
+		    speed: 400});
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
