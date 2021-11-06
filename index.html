@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Giovanna Trigueiro - NLW Heat</title>
+    <title>Giovanna Trigueiro - DoWhile 2021</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,19 +18,28 @@
             </span>
             <img src="https://lorempixel.com/185/185/people/" alt="Foto pessoal">
           </div>
-          <h1>Giovanna Trigueiro</h1>
-          <a href="https://github.com/GiovannaT">
-            <img src="assets/github.svg" alt="Ícone Github">
+          <h1 id="userName">Giovanna Trigueiro</h1>
+          <a 
+          href="https://github.com/GiovannaT"
+          target="_blank">
+            <img 
+            src="assets/github.svg" 
+            alt="Ícone Github">
             Giovannat</a>
-          <p>An student focused on developing the best web projects</p>
-          <ul>
-            <li>
-              <a href="https://www.instagram.com/giitrigueiro">
-              <img src="assets/instagram.svg" alt="Instagram" target="_blank"/>
+          <p class="paragrafo">An student focused on developing the best web projects</p>
+          <ul id="socialLinks">
+            <li class="instagram">
+              <a 
+              href="https://www.instagram.com/giitrigueiro"
+              target="_blank">
+              <img 
+              src="assets/instagram.svg" alt="Instagram" />
               </a>
             </li>
-            <li>
-              <a href="https://twitter.com/ehajovanna">
+            <li class="twitter">
+              <a 
+              href="https://twitter.com/ehajovanna"
+              target="_blank">
               <img src="assets/twitter.svg" alt="Twitter" target="_blank"/>
               </a>
             </li>
@@ -38,6 +47,24 @@
         </div>
       </div>
     </main>
+    
+    <script>
+      const linksSocialMedia = {
+        github: "giovannat",
+        instagram: "giitrigueiro",
+        twitter: "ehajovanna"
+      }
+
+      function changeSocialMedia(){
+        for(let li of socialLinks.children){
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://www.${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+      changeSocialMedia();
+
+    </script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
       VanillaTilt.init(document.querySelector(".card"),{
