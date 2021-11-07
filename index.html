@@ -14,19 +14,25 @@
         <div class="card">
           <div class="avatar">
             <span>
-              <img src="assets/selo.svg" alt="Selo Rocketseat">
+              <img 
+              src="assets/selo.svg" 
+              alt="Selo Rocketseat">
             </span>
-            <img src="https://lorempixel.com/185/185/people/" alt="Foto pessoal">
+            <img 
+            id="photo" 
+            src="https://lorempixel.com/185/185/people/" alt="Foto pessoal">
           </div>
           <h1 id="userName">Giovanna Trigueiro</h1>
-          <a 
+          <a
+          id="userAvatar" 
           href="https://github.com/GiovannaT"
           target="_blank">
             <img 
             src="assets/github.svg" 
             alt="Ícone Github">
-            Giovannat</a>
-          <p class="paragrafo">An student focused on developing the best web projects</p>
+            <span id="userLogin">Giovannat</span>
+            </a>
+          <p id="paragraph">An student focused on developing the best web projects</p>
           <ul id="socialLinks">
             <li class="instagram">
               <a 
@@ -47,24 +53,7 @@
         </div>
       </div>
     </main>
-    
-    <script>
-      const linksSocialMedia = {
-        github: "giovannat",
-        instagram: "giitrigueiro",
-        twitter: "ehajovanna"
-      }
-
-      function changeSocialMedia(){
-        for(let li of socialLinks.children){
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://www.${social}.com/${linksSocialMedia[social]}`
-        }
-      }
-      changeSocialMedia();
-
-    </script>
+    <script src="main.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
       VanillaTilt.init(document.querySelector(".card"),{

@@ -99,7 +99,7 @@
     text-decoration: none;
     position: relative;
     max-width:358px;
-    max-height: 698px;
+    max-height: 680px;
     margin: auto;
     text-align: center;
     color: var(--grey);
@@ -142,7 +142,7 @@
     justify-content:center;
     align-items:center;
   }
-  .paragrafo{
+  #paragraph{
     margin-top:2rem;
     padding: 1rem;
   }
